@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ejiroedwinazkubdeploy 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ejiroedwinazkubdeploy
+  template:
+    metadata:
+      labels:
+        app: ejiroedwinazkubdeploy 
+    spec:
+      containers:
+        - name: ejiroedwinazkubdeploy 
+          image: dev4acr.azurecr.io/ejiroedwinazkubdeploy
+          ports:
+          - containerPort: 80
